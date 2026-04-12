@@ -30,15 +30,15 @@ h6 {
 	margin-bottom: 120px;
 }
 
-.article-title-medium {
+.article__title-medium {
 	font-size: 36px;
 }
 
-.article-text:last-child {
+.article__text:last-child {
 	margin-bottom: 0;
 }
 
-.article-text {
+.article__text {
 	margin-bottom: 20px;
 	font-weight: 400;
 	font-size: 16px;
@@ -46,43 +46,43 @@ h6 {
 	color: #535755;
 }
 
-.article-list {
+.article__list {
 	margin-bottom: 0;
 	padding-left: 16px;
 }
 
-.article-mb-1 {
+.article__mb-1 {
 	margin-bottom: 80px;
 }
 
-.article-mb-2 {
+.article__mb-2 {
 	margin-bottom: 40px;
 }
 
-.article-decor-wrapper {
+.article__decor-wrapper {
 	position: relative;
 }
 
-.article-decor-wrapper-1::before {
+.article__decor-wrapper-1::before {
 	top: 100px;
 	left: 0;
 }
 
-.article-decor-wrapper-2::before {
+.article__decor-wrapper-2::before {
 	right: 0;
 	bottom: 136px;
 }
 
-.article-item:not(:last-child) {
+.article__item:not(:last-child) {
 	margin-bottom: 12px;
 }
 
-.article-item::marker {
+.article__item::marker {
 	color: #3596ed;
 	font-size: 22px;
 }
 
-.article-play-button {
+.article__play-button {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -110,20 +110,20 @@ h6 {
 	transition: background-color 0.2s;
 }
 
-.article-play-button:hover {
+.article__play-button:hover {
 	background-color: #2a8be5;
 }
-.article-play-button:not(:disabled):active {
+.article__play-button:not(:disabled):active {
 	background-color: #175086;
 }
 @media (width <= 768px) {
-	.article-decor-wrapper::before {
+	.article__decor-wrapper::before {
 		display: none;
 	}
-	.article-mb-1 {
+	.article__mb-1 {
 		margin-bottom: 60px;
 	}
-	.article-title-medium {
+	.article__title-medium {
 		font-size: 32px;
 	}
 }
@@ -132,20 +132,20 @@ h6 {
 		padding-top: 60px;
 		padding-bottom: 80px;
 	}
-	.article-title-medium {
+	.article__title-medium {
 		font-size: 28px;
 	}
-	.article-mb-1 {
+	.article__mb-1 {
 		margin-bottom: 40px;
 	}
-	.article-mb-2 {
+	.article__mb-2 {
 		margin-bottom: 30px;
 	}
-	.article-play-button {
+	.article__play-button {
 		width: 50px;
 		height: 50px;
 	}
-	.article-play-button img {
+	.article__play-button .article__img {
 		width: 18px;
 		height: 18px;
 	}

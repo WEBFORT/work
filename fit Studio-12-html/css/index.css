@@ -20,7 +20,7 @@
 	background: url(../img.jpg/decor-large-icon.svg) no-repeat;
 }
 
-.hero-container {
+.hero__container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -30,7 +30,7 @@
 	gap: 28px;
 }
 
-.hero h1 {
+.hero__title {
 	margin-bottom: 40px;
 	font-family: "Oswald", sans-serif;
 	font-weight: 600;
@@ -40,28 +40,28 @@
 	color: #2c332f;
 }
 
-.hero h1 strong {
+.hero__title-accent {
 	font-weight: 600;
 	color: #3596ed;
 }
 
-.hero-info {
+.hero__info {
 	max-width: 492px;
 }
 
-.hero-info .text {
+.hero__info .text {
 	max-width: 410px;
 	margin-bottom: 140px;
 }
 
-.hero-img {
+.hero__img {
 	position: relative;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 }
 
-.hero-choose {
+.hero__choose {
 	position: absolute;
 	top: 40px;
 	left: 50%;
@@ -75,14 +75,14 @@
 	text-align: center;
 }
 
-.news-container {
+.news__container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	gap: 28px;
 }
 
-.news-article {
+.news__article {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -96,26 +96,26 @@
 	overflow: hidden;
 }
 
-.news-article img {
+.news__article-img {
 	display: block;
 }
 
-.news-info {
+.news__article-info {
 	padding: 20px 20px 0;
 	margin-bottom: 12px;
 }
 
-.news-date {
+.news__article-date {
 	display: inline-block;
 	margin-bottom: 8px;
 }
 
-.news-article footer {
+.news__article-footer{
 	padding: 0 20px 20px;
 	margin-top: auto;
 }
 
-.news-link {
+.news__article-link {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -129,7 +129,7 @@
 	color: #3596ed;
 }
 
-.news-link::after {
+.news__article-link::after {
 	content: "";
 	display: block;
 	width: 22px;
@@ -144,7 +144,7 @@
 		-webkit-transform 0.2s;
 }
 
-.news-link:hover {
+.news__article-link:hover {
 	-webkit-transform: translateX(5px);
 	-ms-transform: translateX(5px);
 	transform: translateX(5px);
@@ -164,7 +164,7 @@
 	background: url(../img.jpg/decor-icon.svg) repeat-x;
 }
 
-.faq-container {
+.faq__container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -174,22 +174,22 @@
 	gap: 28px;
 }
 
-details {
+.faq__details {
 	margin-bottom: 20px;
 	border-block: 1px solid #d3cbd9;
 }
 
-details:last-child {
+.faq__details:last-child {
 	margin-bottom: 0;
 }
 
-details[open] summary::after {
+.faq__details[open] .faq__summary::after {
 	-webkit-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 
-summary {
+.faq__summary {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -205,7 +205,7 @@ summary {
 	cursor: pointer;
 }
 
-summary::after {
+.faq__summary::after {
 	content: "";
 	display: inline-block;
 	-ms-flex-negative: 0;
@@ -215,22 +215,22 @@ summary::after {
 	background: url(../img.jpg/Arrow-down-icon\ .svg) no-repeat center / cover;
 }
 
-summary::-webkit-details-marker {
+.faq__summary::-webkit-details-marker {
 	display: none;
 }
 
-details > p {
+.faq__details .faq__content {
 	padding: 0 20px 20px;
 }
 
 @media (width <= 1440px) {
-	.hero-img img {
+	.hero__img img {
 		width: 50%;
 	}
 }
 
 @media (width <= 992px) {
-	.hero-container {
+	.hero__container {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
@@ -242,18 +242,18 @@ details > p {
 	.hero::after {
 		display: none;
 	}
-	.hero-info {
+	.hero__info {
 		text-align: center;
 	}
-	.hero h1 {
+	.hero__title {
 		margin-bottom: 30px;
 		font-size: 52px;
 	}
-	.hero-info .text {
+	.hero__info .text {
 		max-width: inherit;
 		margin-bottom: 30px;
 	}
-	.news-container {
+	.news__container {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		-webkit-box-pack: center;
@@ -261,18 +261,18 @@ details > p {
 		justify-content: center;
 		gap: 20px;
 	}
-	.news-article {
+	.news__article {
 		-ms-flex-preferred-size: 50%;
 		flex-basis: 50%;
 		max-width: 350px;
 	}
-	.news-article img {
+	.news__article-img{
 		width: 100%;
 	}
 	.faq::before {
 		display: none;
 	}
-	.faq-container {
+	.faq__container {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: reverse;
 		-ms-flex-direction: column-reverse;
@@ -284,10 +284,10 @@ details > p {
 }
 
 @media (width <= 768px) {
-	.hero h1 {
+	.hero__title {
 		font-size: 50px;
 	}
-	.news-article {
+	.news__article {
 		-ms-flex-preferred-size: 100%;
 		flex-basis: 100%;
 		max-width: 400px;
@@ -295,16 +295,16 @@ details > p {
 }
 
 @media (width <= 576px) {
-	.hero-info {
+	.hero__info {
 		max-width: 410px;
 	}
 	.hero {
 		padding-top: 60px;
 	}
-	.hero h1 {
+	.hero__title {
 		font-size: 42px;
 	}
-	.hero-choose {
+	.hero__choose {
 		max-width: 125px;
 		padding: 10px;
 		font-size: 14px;
