@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="arrow-right" viewBox="0 0 24 24" fill="none">
-        <path d="M6 17L11 12L6 7M13 17L18 12L13 7" stroke-linecap="round" stroke-linejoin="round" />
-    </symbol>
-    <symbol id="double-arrow" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 28.3333L18.3333 20L10 11.6666M21.6667 28.3333L30 20L21.6667 11.6666" 
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </symbol>
-</svg>
