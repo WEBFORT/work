@@ -1,0 +1,21 @@
+.banner__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    z-index: 1;
+}
+
+.banner__img {
+	position: absolute;
+	left: 50%;
+	width: 997px;
+	height: 850px;
+}
+
+.banner__img-background {
+	width: 1920px;
+	height: 850px;
+	width: 100%;
+    z-index: 0;
+}

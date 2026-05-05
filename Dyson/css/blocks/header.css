@@ -1,0 +1,32 @@
+.header {
+	position: fixed;
+	background-color: #111111;
+	top: 0;
+	left: 0;
+	right: 0;
+    z-index: 1;
+}
+
+.header__container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 50px;
+}
+
+.header__ations-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.header__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
