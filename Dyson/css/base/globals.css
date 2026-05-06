@@ -1,8 +1,0 @@
-.page {
-    font-family: var(--second-family);
-}
-
-.container {
-    width: min(var(--container-wight), 100%);
-    margin-inline: auto;
-}
