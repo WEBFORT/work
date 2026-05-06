@@ -1,0 +1,40 @@
+.banner {
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	height: 850px;
+	background-color: #ddd;
+}
+
+.banner__title {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 250px;
+	left: 280px;
+	font-weight: 900;
+	width: 554px;
+}
+
+.banner__description {
+	position: relative;
+	top: 384px;
+	left: 280px;
+	width: 554px;
+	height: 68px;
+	font-weight: 400;
+	font-size: 26px;
+	font-family: var(--font-family);
+}
+
+.banner__img {
+	position: absolute;
+	left: 47%;
+	top: 0;
+}
+
+.banner__button {
+	position: absolute;
+
+	
+}
