@@ -1,0 +1,19 @@
+/* base */
+@import "./base/normalize.css";
+@import "./base/fonts.css";
+@import "./base/globals.css";
+@import "./base/vars.css";
+
+/* blocks */
+@import "./blocks/header.css";
+@import "./blocks/menu.css";
+@import "./blocks/banner.css";
+@import "./blocks/section.css";
+@import "./blocks/expert-opinion.css";
+@import "./blocks/advantages.css";
+@import "./blocks/expert-opinion.css";
+@import "./blocks/expert-opinion.css";
+@import "./blocks/expert-opinion.css";
+@import "./blocks/expert-opinion.css";
+@import "./blocks/expert-opinion.css";
+@import "./blocks/expert-opinion.css";

@@ -1,0 +1,45 @@
+.header {
+	position: fixed;
+	background-color: #111111;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	/* font-family: var(--second-family);
+    font-weight: 900; */
+}
+
+.header__container {
+	display: flex;
+	justify-content: center;
+}
+
+.header__menu {
+	display: flex;
+	gap: 60px;
+}
+
+.header__controls {
+	display: flex;
+	justify-content: center;
+	margin-left: 60px;
+}
+
+.header__logo {
+	display: flex;
+	margin-right: 50px;
+}
+
+.header__actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 60px;
+}
+
+.header__burger {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 50px;
+}
