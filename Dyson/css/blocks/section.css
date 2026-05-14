@@ -1,0 +1,25 @@
+.section {
+	position: relative;
+	top: 75px;
+    margin-bottom: 150px;
+}
+
+.section__category {
+	display: -ms-grid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 20px;
+	box-shadow:
+		0 0 30px 0 rgba(0, 0, 0, 0.05),
+		0 0 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+.section__category-title {
+	padding: 19px 40px 11px;
+}
+
+.section__category-description {
+	display: inline-flex;
+	padding: 0 40px 30px;
+    gap: 20px;
+}
