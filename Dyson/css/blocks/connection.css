@@ -1,0 +1,41 @@
+.connection {
+    background-color: #d8d8d8;
+}
+
+.connection__container {
+	display: flex;
+	gap: 135px;
+}
+
+.connection__form {
+	display: flex;
+	flex-direction: column;
+}
+
+.connection__fieldset {
+	border: none;
+}
+
+.connection__input {
+	display: inline-block;
+	border: none;
+	border-bottom: 1px solid #111;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	width: 555px;
+}
+
+.connection__button {
+	padding-top: 70px;
+}
+
+.connection__application {
+	color: #fff;
+	background-color: #111;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+.connection__checkbox {
+    padding-top: 35px;
+}
