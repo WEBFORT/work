@@ -1,0 +1,36 @@
+.news {
+    position: relative;
+    top: 75px;
+    margin-bottom: 150px;
+}
+
+.news__content {
+	display: -ms-grid;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	gap: 20px;
+	padding-top: 70px;
+}
+
+.news__date {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.news__title-new {
+	padding-bottom: 15px;
+}
+
+.news__description {
+	padding-bottom: 20px;
+}
+
+.news__link {
+	color: #;
+}
+
+.news__button-more {
+	display: flex;
+	justify-content: center;
+	padding-top: 80px;
+}
