@@ -1,0 +1,9 @@
+:root {
+    /* font-family */
+	--font-family: "Open Sans", sans-serif;
+	--second-family: "NAMU", sans-serif;
+
+    /* container */
+    --container-wight: 1262px;
+    --container-padding: 20px;
+}
