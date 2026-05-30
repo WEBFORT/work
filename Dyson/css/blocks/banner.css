@@ -1,0 +1,58 @@
+.banner {
+	position: relative;
+	background-color: #ddd;
+	padding: 299px 0;
+}
+}
+
+@media (width > 992px) {
+	.banner {
+		padding-bottom: 150px;
+	}
+}
+
+@media (width <= 992px) {
+	.banner {
+		padding-bottom: 70px;
+	}
+}
+
+@media (width <= 576px) {
+	.banner {
+		padding-bottom: 46px;
+	}
+}
+
+.banner__container {
+
+}
+
+
+.banner__header {
+
+}
+
+.banner__description {
+	margin-top: 40px;
+}
+
+
+.banner__img {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	width: clamp(280px, 7.465rem + 42.82vw, 736px);
+	right: 150px;
+		top: 15%;
+		margin-left: auto;
+}
+
+.banner__footer {
+	margin-top: 90px;
+}
+
+.banner__details {
+	border-radius: 3px;
+	padding: 15px 36px;
+	background-color: #c5358c;
+}
