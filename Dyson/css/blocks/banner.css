@@ -1,0 +1,65 @@
+.banner {
+	background-color: #ddd;
+	padding-top: 123px;
+}
+
+.banner__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (width <= 575px) {
+	.banner__container {
+	flex-wrap: wrap;
+}
+
+.banner__header {
+	padding-top: clamp(5rem, -1.857rem + 14.29vw, 11rem)
+}
+
+
+.banner__title {
+	font-size: clamp(17px, 0.107rem + 2.66vw, 40px);
+}
+
+.banner__description {
+	padding-top: clamp(10px, 0.21rem + 1.16vw, 40px);
+	font-size: clamp(7px, -0.269rem + 1.97vw, 24px);
+}
+
+
+.banner__img {
+	width: clamp(300px, 0.636rem + 50.4vw, 736px);
+}
+
+.banner__img {
+	width: 700px;
+}
+
+.banner__img-mini {
+	transform: translateX(50%);
+}
+
+.banner__footer {
+	padding-top: clamp(20px, -1.658rem + 8.09vw, 90px);
+}
+
+.banner__details {
+	border-radius: 3px;
+	padding: clamp(5px, -0.103rem + 1.16vw, 15px) clamp(7px, -0.934rem + 3.82vw, 40px);
+	background-color: #c5358c;
+	color: #fff;
+}
+
+
+@media (width > 575px) {
+	.banner__img-mini--delate {
+		display: none;
+	}
+}
+
+@media (width <= 575px) {
+	.banner__img-delate {
+		display: none;
+	}
+}
