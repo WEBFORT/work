@@ -37,7 +37,7 @@
 
 @media (width < 575px) {
 	.advantages__characteristics {
-		justify-content: center;
+		justify-content: space-between;
 		flex-direction: row;
 		gap: 43px;
 	}

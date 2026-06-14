@@ -18,3 +18,6 @@
 @import "./blocks/connection.css";
 @import "./blocks/footer.css";
 @import "./blocks/burger.css";
+@import "./blocks/selector.css";
+@import "./blocks/modal.css";
+@import "./blocks/model-comment.css";

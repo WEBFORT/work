@@ -19,12 +19,6 @@
 	flex-wrap: wrap;
 }
 
-.special-offers__button {
-	transition:
-		border-color 0.4s,
-		color 0.4s;
-}
-
 .special-offers__button :hover {
 	border-color: #c5358c;
 	color: #c5358c;
@@ -42,6 +36,9 @@
 	border-radius: 31px;
 	padding: 6px 10px 7px;
 	font-size: clamp(12px, -0.08rem + 1.34vw, 18px);
+	transition:
+		border-color 0.4s,
+		color 0.4s;
 }
 
 @media (width <= 992px) {
@@ -101,24 +98,24 @@
 	color: #c5358c;
 }
 
-.special-offers__form {
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
+.special-offers__details-description:hover {
+	box-shadow:
+		0 0 30px 0 #c5358c,
+		0 0 30px 0 #c5358c;
 }
-
-.special-offers__form select {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	background: url(/images/Rectangle\ 24.png) no-repeat right;
-}
-
 
 .special-offers__form {
 	display: flex;
 	justify-content: flex-end;
 	padding-bottom: clamp(30px, 1.46rem + 1.16vw, 40px);
+	transition:
+		color 0.4s,
+		border-color 0.4s;
+}
+
+.special-offers__form:hover {
+	color: #c5358c;
+	border-color: #c5358c;
 }
 
 @media (width <= 575px) {
@@ -169,13 +166,12 @@
 }
 
 .special-offers__product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	box-shadow:
 		0 0 30px 0 rgba(0, 0, 0, 0.05),
 		0 0 30px 0 rgba(0, 0, 0, 0.05);
-}
-
-.special-offers__img-2 {
-	padding-bottom: clamp(18px, 0.571rem + 0.89vw, 22px);
 }
 
 @media (width <= 992px) {
@@ -420,6 +416,20 @@
 	border-radius: 3px;
 	padding: 10px;
 	width: 100%;
+	stroke: #111;
+	transition:
+		border-color 0.4s,
+		stroke 0.4s,
+		color 0.4s;
+}
+
+.special-offers__number:hover {
+	border-color: #c5358c;
+	color: #c5358c;
+}
+
+.special-offers__minus:hover {
+	stroke: #c5358c;
 }
 
 @media (width <= 992px) {

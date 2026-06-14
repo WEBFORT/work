@@ -1,5 +1,10 @@
 import HeaderFixed from "./header.js";
 import BurgerMenu from "./burger.js";
+import selector from "./selector.js";
+import Modal from "./modal.js";
+import Card from "./card.js";
+import { productSlider } from "./product-slider.js";
+
 
 try {
 	const headerFixed = new HeaderFixed({

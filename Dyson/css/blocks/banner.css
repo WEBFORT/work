@@ -82,6 +82,11 @@
 		clamp(7px, -1.224rem + 4.62vw, 46px);
 	background-color: #c5358c;
 	color: #fff;
+	transition: box-shadow 0.4s;
+}
+
+.banner__details:hover {
+	box-shadow: 0 0 30px 0 #c5358c;
 }
 
 @media (width <= 575px) {

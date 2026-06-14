@@ -42,6 +42,7 @@ details[open] .faq__plus {
 	align-items: center;
 	user-select: none;
 	padding-top: clamp(16px, 0.704rem + 1.58vw, 34px);
+	padding-right: 3rem;
 	padding-bottom: clamp(12px, 0.388rem + 1.93vw, 34px);
 	font-size: clamp(11px, 0.507rem + 0.96vw, 22px);
 	color: #111;

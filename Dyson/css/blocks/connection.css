@@ -99,7 +99,7 @@
 
 .connection__checkbox:checked::after {
 	background:
-		url(/images/checkbox-check.png) no-repeat center;
+		url(../images/checkbox-check.png) no-repeat center;
 }
 
 .connection__checkbox::after {

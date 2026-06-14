@@ -9,4 +9,9 @@
 .menu__link {
 	font-size: clamp(11px, 0.045rem + 1.34vw, 20px);
 	color: #fff;
+	transition: color 0.4s;
+}
+
+.menu__link:hover {
+	color: #c5358c;
 }

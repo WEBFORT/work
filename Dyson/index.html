@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dyson</title>
+		<title>
+			Неофициальный магазин Dyson с доставкой по РФ: купить пылесосы, стайлеры,
+			выпрямители и фены
+		</title>
 		<link rel="stylesheet" href="./css/index.css" />
 		<script defer src="./js/index.js" type="module"></script>
 	</head>
@@ -30,6 +33,7 @@
 					</button>
 					<a href="#" class="logo header__logo">
 						<img
+							class="header__logo-img"
 							src="./images/logo-icon.svg"
 							width="183"
 							height="77"
@@ -516,34 +520,35 @@
 									dyson hs01 airwrap compliete
 								</li>
 							</button>
-							<button class="special-offers__button ">
+							<button class="special-offers__button">
 								<li class="special-offers__item description__sm">
-									фен щетка дайсо
+									фен щетка дайсон
 								</li>
 							</button>
-							<button class="special-offers__button ">
+							<button class="special-offers__button">
 								<li class="special-offers__item description__sm">
-									нdyson стайлер красный
+									dyson стайлер красный
 								</li>
-								</button>
-								<button class="special-offers__details">
+							</button>
+							<button class="special-offers__details">
 								<li class="special-offers__details-description">
 									Показать ещё
 								</li>
 							</button>
 						</ul>
 					</div>
-					<form class="special-offers__form">
-						<label>
-							<select class="special-offers__filter" name="filter">
-								<option value="none" select disabled hidden>Сначала популярные</option>
-								<option value="Cheap ones first">Сначала дешёвые</option>
-								<option value="Dear ones first">Сначала дорогие</option>
-								<option value="New items">Новинки</option>
-								<option value="High rating">Высокий рейтинг</option>
-							</select>
-						</label>
-					</form>
+					<div class="special-offers__form custom-select">
+						<div class="select-header">
+							<span class="selected-value">Сначала популярные</span>
+							<span class="arrow">▼</span>
+						</div>
+						<ul class="select-options">
+							<li data-value="1">Сначала дешёвые</li>
+							<li data-value="2">Сначала дорогие</li>
+							<li data-value="3">Новинки</li>
+							<li data-value="4">Высокий рейтинг</li>
+						</ul>
+					</div>
 					<div class="special-offers__products">
 						<article class="special-offers__product">
 							<picture>
@@ -598,39 +603,41 @@
 									alt=""
 								/>
 							</picture>
-							<p class="special-offers__description description__xs">
-								Фен Dyson Supersonic HD07 <br />с 5 насадками и подставкой
-							</p>
-							<div class="special-offers__divi">
-								<ul class="special-offers__statutes-list">
-									<li class="special-offers__statutes-item description__xs">
-										В наличии
-									</li>
-								</ul>
-								<div class="special-offers__div">
-									<p class="special-offers__discount description__xs">-15%</p>
+							<div class="special-offers__content">
+								<p class="special-offers__description description__xs">
+									Фен Dyson Supersonic HD07 <br />с 5 насадками и подставкой
+								</p>
+								<div class="special-offers__divi">
+									<ul class="special-offers__statutes-list">
+										<li class="special-offers__statutes-item description__xs">
+											В наличии
+										</li>
+									</ul>
+									<div class="special-offers__div">
+										<p class="special-offers__discount description__xs">-15%</p>
+									</div>
 								</div>
+								<p class="special-offers__price">
+									47 990Р
+									<span class="special-offers__old-price">51 990 Р</span>
+								</p>
+								<footer class="special-offers__footer">
+									<button class="special-offers__number">
+										<svg class="special-offers__minus" width="20" height="2">
+											<use href="./icons/main-sprite.svg#minus"></use>
+										</svg>
+										<p class="special-offers__one title__sm">1</p>
+										<svg class="special-offers__plus" width="20" height="20">
+											<use href="./icons/main-sprite.svg#plus"></use>
+										</svg>
+									</button>
+									<button class="special-offers__cart">
+										<p class="special-offers__description-cart title__sm">
+											В корзину
+										</p>
+									</button>
+								</footer>
 							</div>
-							<p class="special-offers__price">
-								47 990Р
-								<span class="special-offers__old-price">51 990 Р</span>
-							</p>
-							<footer class="special-offers__footer">
-								<button class="special-offers__number">
-									<svg class="special-offers__minus" width="20" height="2">
-										<use href="./icons/main-sprite.svg#minus"></use>
-									</svg>
-									<p class="special-offers__one title__sm">1</p>
-									<svg class="special-offers__plus" width="20" height="20">
-										<use href="./icons/main-sprite.svg#plus"></use>
-									</svg>
-								</button>
-								<button class="special-offers__cart">
-									<p class="special-offers__description-cart title__sm">
-										В корзину
-									</p>
-								</button>
-							</footer>
 						</article>
 						<article class="special-offers__product">
 							<picture>
@@ -732,39 +739,41 @@
 									alt=""
 								/>
 							</picture>
-							<p class="special-offers__description description__xs">
-								Фен Dyson Supersonic HD07 <br />с 5 насадками и подставкой
-							</p>
-							<div class="special-offers__divi">
-								<ul class="special-offers__statutes-list">
-									<li class="special-offers__statutes-item description__xs">
-										В наличии
-									</li>
-								</ul>
-								<div class="special-offers__div">
-									<p class="special-offers__discount description__xs">-15%</p>
+							<div class="special-offers__content">
+								<p class="special-offers__description description__xs">
+									Фен Dyson Supersonic HD07 <br />с 5 насадками и подставкой
+								</p>
+								<div class="special-offers__divi">
+									<ul class="special-offers__statutes-list">
+										<li class="special-offers__statutes-item description__xs">
+											В наличии
+										</li>
+									</ul>
+									<div class="special-offers__div">
+										<p class="special-offers__discount description__xs">-15%</p>
+									</div>
 								</div>
+								<p class="special-offers__price title__medium">
+									47 990РР
+									<span class="special-offers__old-price">51 990 Р</span>
+								</p>
+								<footer class="special-offers__footer">
+									<button class="special-offers__number">
+										<svg class="special-offers__minus" width="20" height="2">
+											<use href="./icons/main-sprite.svg#minus"></use>
+										</svg>
+										<p class="special-offers__one title__sm">1</p>
+										<svg class="special-offers__plus" width="20" height="20">
+											<use href="./icons/main-sprite.svg#plus"></use>
+										</svg>
+									</button>
+									<button class="special-offers__cart">
+										<p class="special-offers__description-cart title__sm">
+											В корзину
+										</p>
+									</button>
+								</footer>
 							</div>
-							<p class="special-offers__price title__medium">
-								47 990РР
-								<span class="special-offers__old-price">51 990 Р</span>
-							</p>
-							<footer class="special-offers__footer">
-								<button class="special-offers__number">
-									<svg class="special-offers__minus" width="20" height="2">
-										<use href="./icons/main-sprite.svg#minus"></use>
-									</svg>
-									<p class="special-offers__one title__sm">1</p>
-									<svg class="special-offers__plus" width="20" height="20">
-										<use href="./icons/main-sprite.svg#plus"></use>
-									</svg>
-								</button>
-								<button class="special-offers__cart">
-									<p class="special-offers__description-cart title__sm">
-										В корзину
-									</p>
-								</button>
-							</footer>
 						</article>
 						<article
 							class="special-offers__product special-offers__product-delate"
@@ -865,7 +874,13 @@
 							</svg>
 						</article>
 						<article class="reviews__button">
-							<button class="reviews__write title__sm">Написать отзыв</button>
+							<button
+								class="reviews__write title__sm"
+								data-modal-button="comment"
+								data-modal-speed="1000"
+							>
+								Написать отзыв
+							</button>
 						</article>
 					</section>
 					<section class="reviews__comment">
@@ -1389,5 +1404,38 @@
 				</div>
 			</div>
 		</footer>
+		<div class="modal">
+			<div
+				class="modal__window modal-comment"
+				data-modal-window="comment"
+				data-modal-close
+			>
+				<button
+					class="modal__close"
+					aria-label="Закрыть"
+					title="Закрыть"
+					data-modal-close
+				>
+					<svg width="24" height="24">
+						<use href="./icons/sprite.svg#cross"></use>
+					</svg>
+				</button>
+				<div class="modal__content modal-comment__content">
+					<h3 class="modal-comment__title title-sm">Оставить комментарий</h3>
+					<form class="modal-comment__form">
+						<label class="modal-comment__label">
+							<input
+								class="modal-comment__input"
+								type="comment"
+								placeholder="Ваш комментарий..."
+								name="comment"
+								required
+							/>
+						</label>
+						<button class="modal-comment__submit">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

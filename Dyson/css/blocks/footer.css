@@ -73,7 +73,11 @@
 
 .footer__link {
 	color: #fff;
+	transition: color 0.4s;
+}
 
+.footer__link:hover {
+	color: #c5358c;
 }
 
 @media (width <= 575px) {
@@ -107,6 +111,11 @@
 	display: flex;
 	gap: clamp(10px, 0.21rem + 1.16vw, 20px);
 	padding-top: clamp(15px, -0.683rem + 4.51vw, 54px);
+	stroke: #111;
+}
+
+.footer__networks:hover {
+	fill: #c5358c;
 }
 
 @media (width <= 575px) {

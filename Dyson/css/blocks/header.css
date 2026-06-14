@@ -95,6 +95,10 @@
 	width: clamp(94px, 4.411rem + 7.81vw, 183px);
 }
 
+.header__logo-img:hover {
+	
+}
+
 .header__actions {
 	display: flex;
 	justify-content: center;
@@ -104,4 +108,10 @@
 
 .header__actions-cart {
 	width: clamp(24px, 1.303rem + 1.05vw, 40px);
+	stroke: #fff;
+	transition: stroke 0.4s;
+}
+
+.header__actions-cart:hover {
+	stroke: #c5358c;
 }
