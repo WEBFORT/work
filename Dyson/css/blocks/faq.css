@@ -1,0 +1,64 @@
+.faq {
+	margin-bottom: clamp(46px, 1.164rem + 9.12vw, 150px);
+}
+.faq__background {
+	background-color: #f8f8f8;
+}
+
+.faq__title {
+	padding-top: clamp(46px, 1.164rem + 9.12vw, 150px);
+	border-bottom: 1px solid #111;
+	padding-bottom: clamp(38px, 2.03rem + 1.84vw, 59px);
+	font-size: clamp(18px, 0.664rem + 2.46vw, 46px);
+}
+
+.faq__accordion {
+	padding-bottom: clamp(46px, 1.164rem + 9.12vw, 150px);
+}
+
+.faq__details {
+	position: relative;
+	align-items: center;
+	border-bottom: 1px solid #111;
+}
+
+details[open] .faq__plus {
+	transform: rotate(45deg);
+	width: clamp(20px, 1.086rem + 0.88vw, 30px);
+	height: clamp(20px, 1.086rem + 0.88vw, 30px);
+	color: #c5358c;
+}
+
+.faq__plus {
+	position: absolute;
+	right: 0;
+	width: clamp(25px, 1.316rem + 1.32vw, 40px);
+	height: clamp(25px, 1.316rem + 1.32vw, 40px);
+}
+
+.faq__summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	user-select: none;
+	padding-top: clamp(16px, 0.704rem + 1.58vw, 34px);
+	padding-right: 3rem;
+	padding-bottom: clamp(12px, 0.388rem + 1.93vw, 34px);
+	font-size: clamp(11px, 0.507rem + 0.96vw, 22px);
+	color: #111;
+}
+
+.faq__description {
+	padding-bottom: clamp(25px, 1.151rem + 2.19vw, 50px);
+	font-size: clamp(10px, 0.461rem + 0.88vw, 20px);
+}
+
+.faq__unwrap {
+	text-align: center;
+}
+
+@media (width <= 575px) {
+	.faq__delate {
+		display: none;
+	}
+}

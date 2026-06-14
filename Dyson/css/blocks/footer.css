@@ -1,0 +1,145 @@
+.footer {
+	background-color: #111;
+}
+
+.footer__logo {
+    padding-top: clamp(20px, 0.004rem + 3.47vw, 50px);
+	width: clamp(100px, 2.802rem + 9.6vw, 183px);
+}
+
+.footer__titl {
+	color: #fff;
+	padding-bottom: 20px;
+	font-size: clamp(13px, 0.522rem + 0.81vw, 20px);
+}
+
+@media (width <= 575px) {
+	.footer__titl {
+		font-size: clamp(9px, 0.085rem + 2.55vw, 16px);
+	}
+}
+
+.footer__title {
+	color: #fff;
+	padding-bottom: clamp(6px, 0.209rem + 0.46vw, 10px);
+	font-size: clamp(11px, 0.314rem + 1.04vw, 20px);
+}
+
+@media (width <= 575px) {
+	.footer__title {
+		font-size: clamp(9px, 0.085rem + 2.55vw, 16px);
+	}
+}
+
+.footer__content {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding-top: clamp(10px, -0.206rem + 2.31vw, 30px);
+	padding-bottom: clamp(30px, 1.826rem + 0.26vw, 33px);
+}
+
+@media (width <= 575px) {
+	.footer__content {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.footer__list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.footer__item-phone {
+	font-weight: 900;
+	font-size: clamp(11px, 0.314rem + 1.04vw, 20px);
+}
+
+@media (width <= 575px) {
+	.footer__item-phone {
+		font-size: clamp(9px, 0.017rem + 2.91vw, 17px);
+	}
+}
+
+.footer__item {
+	font-size: clamp(8px, 0.001rem + 1.39vw, 20px);
+}
+
+@media (width <= 575px) {
+	.footer__item {
+	font-size: clamp(7px, 0.097rem + 1.82vw, 12px);
+}
+}
+
+.footer__link {
+	color: #fff;
+	transition: color 0.4s;
+}
+
+.footer__link:hover {
+	color: #c5358c;
+}
+
+@media (width <= 575px) {
+	.footer__stocks {
+		margin-top: clamp(13px, -0.006rem + 4.36vw, 25px);
+	}
+}
+
+@media (width <= 575px) {
+	.footer__logistics {
+		margin-top: -10px;
+	}
+}
+
+.footer__copyright {
+    position: relative;
+    bottom: clamp(40px, 0.963rem + 4.28vw, 77px);
+    display: flex;
+    justify-content: flex-end;
+	color: #fff;
+}
+
+@media (width <= 575px) {
+	.footer__copyright {
+		justify-content: left;
+		top: clamp(-21px, -2.676rem + 7.27vw, -1px);
+	}
+}
+
+.footer__networks {
+	display: flex;
+	gap: clamp(10px, 0.21rem + 1.16vw, 20px);
+	padding-top: clamp(15px, -0.683rem + 4.51vw, 54px);
+	stroke: #111;
+}
+
+.footer__networks:hover {
+	fill: #c5358c;
+}
+
+@media (width <= 575px) {
+	.footer__networks {
+		margin-top: clamp(0px, -0.818rem + 4.36vw, 12px);
+	}
+}
+
+.footer__network {
+	width: clamp(20px, 1.042rem + 0.58vw, 25px);
+}
+
+@media (width <= 575px) {
+	.footer__network {
+		width: clamp(11px, -0.403rem + 5.82vw, 27px);
+	}
+}
+
+.footer__copyright-description {
+	font-size: clamp(9px, 0.23rem + 0.92vw, 17px);
+}
+
+@media (width <= 575px) {
+	.footer__copyright-description {
+	font-size: clamp(7px, -0.04rem + 2.55vw, 14px);
+}
+}
