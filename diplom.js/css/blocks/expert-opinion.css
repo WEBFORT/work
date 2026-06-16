@@ -1,0 +1,101 @@
+.expert-opinion {
+	background-color: #f8f8f8;
+	margin-bottom: clamp(46px, 1.164rem + 9.12vw, 150px);
+}
+
+.expert-opinion__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (width < 992px) {
+	.expert-opinion__container {
+		padding-bottom: clamp(46px, 2.225rem + 3.47vw, 70px);
+	}
+}
+
+.expert-opinion__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.expert-opinion__title-bg {
+	font-size: clamp(24px, 1.214rem + 1.22vw, 37px);
+	padding-top: clamp(46px, 2.496rem + 2.02vw, 60px);
+}
+
+.expert-opinion__title-md {
+	font-size: clamp(20px, 1.026rem + 1.22vw, 34px);
+	padding-top: clamp(30px, 1.604rem + 1.45vw, 40px);
+}
+
+.expert-opinion__title-sm {
+	font-size: clamp(20px, 0.964rem + 1.22vw, 33px);
+	padding-top: clamp(30px, 1.604rem + 1.45vw, 40px);
+}
+
+.expert-opinion__title-xs {
+	font-size: clamp(19px, 0.901rem + 1.22vw, 32px);
+	padding-top: clamp(30px, 1.604rem + 1.45vw, 40px);
+}
+
+@media (width <= 992px) {
+	.expert-opinion__title-bg,
+	.expert-opinion__title-md,
+	.expert-opinion__title-sm,
+	.expert-opinion__title-xs {
+		padding-bottom: 12px;
+	}
+}
+
+@media (width <= 575px) {
+	.expert-opinion__title-bg,
+	.expert-opinion__title-md,
+	.expert-opinion__title-sm,
+	.expert-opinion__title-xs {
+		padding-bottom: 14px;
+	}
+}
+
+.expert-opinion__description {
+	font-size: clamp(12px, 0.618rem + 0.56vw, 18px);
+}
+
+.expert-opinion__title {
+	padding-top: clamp(46px, 1.164rem + 9.12vw, 150px);
+	padding-bottom: clamp(20px, 0.921rem + 1.75vw, 40px);
+	font-size: clamp(23px, -0.5rem + 3.13vw, 37px);
+}
+
+@media (width < 992px) {
+	.expert-opinion__title {
+		font-size: clamp(18px, 0.707rem + 1.78vw, 37px);
+	}
+}
+
+.expert-opinion__item {
+	padding-bottom: 20px;
+	font-size: clamp(11px, 0.134rem + 0.89vw, 15px);
+}
+
+@media (width < 992px) {
+	.expert-opinion__item {
+		font-size: clamp(12px, 0.618rem + 0.56vw, 18px);
+	}
+}
+.expert-opinion__img {
+	margin-top: 6rem;
+	width: 131rem;
+}
+
+@media (width < 992px) {
+	.expert-opinion-img--delate {
+		display: none;
+	}
+}
+
+@media (width >= 992px) {
+	.expert-opinion__content-delate {
+		display: none;
+	}
+}
