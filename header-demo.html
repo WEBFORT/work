@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PERESKAZ TV — шапка сайта</title>
+<style>
+
+/* =========================================================
+   ТОКЕНЫ — взяты из вашего main.css, ничего не выдумано
+   ========================================================= */
+:root{
+  --color-dark:#161616;
+  --color-light:#ffffff;
+  --color-accent:#fd7005;   /* фирменный оранжевый, ссылки/hover */
+  --color-badge:#9a2828;    /* тот самый красный из старых кнопок сайта — теперь это "TV" на логотипе */
+  --header-h-mobile:64px;
+  --header-h-mobile-scrolled:52px;
+  --header-h-desktop:96px;
+  --d7p-font-family: Formular, "system-ui", Arial, sans-serif;
+  --d7p-font-heading: Geometria, var(--d7p-font-family);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(to bottom,#d7e2e6,#fafafa);
+  font-family:var(--d7p-font-family);
+  color:var(--color-dark);
+}
+a{ color:inherit; }
+button{ font:inherit; }
+.d7p-visually-hidden{
+  position:absolute; width:1px; height:1px; margin:-1px; padding:0;
+  overflow:hidden; clip-path:inset(100%); white-space:nowrap; border:0;
+}
+.d7p-container{ max-width:1440px; margin:0 auto; padding:0 16px; }
+
+/* =========================================================
+   ШАПКА — мобайл-фёрст
+   Раньше: фикс. высота 8rem, "width" у логотипа задавался
+   4 раза подряд (последний — 10rem — и ломал flex),
+   тег tagline объявлялся дважды с разными text-align/white-space.
+   Здесь — один источник правды на каждое свойство.
+   ========================================================= */
+.d7p-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:#000000;
+  min-height:var(--header-h-mobile);
+  transition:min-height .2s ease, box-shadow .2s ease;
+}
+.d7p-header.is-scrolled{
+  min-height:var(--header-h-mobile-scrolled);
+  box-shadow:0 2px 14px rgba(0,0,0,.35);
+}
+
+.d7p-header__container{
+  height:var(--header-h-mobile);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:height .2s ease;
+}
+.d7p-header.is-scrolled .d7p-header__container{ height:var(--header-h-mobile-scrolled); }
+
+/* Кнопки-иконки (бургер / лупа) — одна общая база */
+.d7p-header__action{
+  flex-shrink:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  height:44px;
+  padding:0;
+  border:0;
+  border-radius:6px;
+  background:transparent;
+  color:#ffffff;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+.d7p-header__action:hover{ background:rgba(255,255,255,.1); }
+.d7p-header__action[aria-expanded="true"]{ background:rgba(255,255,255,.15); }
+.d7p-header__action svg{ width:22px; height:22px; }
+.d7p-header__action--menu .icon-close{ display:none; }
+.d7p-header__action--menu[aria-expanded="true"] .icon-burger{ display:none; }
+.d7p-header__action--menu[aria-expanded="true"] .icon-close{ display:block; }
+
+/* Логотип — единственный "хозяин" ширины: flex-grow, без магических width */
+.d7p-header__logo{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:2px;
+  min-width:0;      /* даёт тексту право сжиматься/переноситься вместо распирания флекса */
+  flex:1 1 auto;
+  text-decoration:none;
+}
+.d7p-header__wordmark{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--d7p-font-heading);
+  font-weight:700;
+  font-size:clamp(1.05rem, 4vw, 1.375rem);
+  line-height:1;
+  color:#ffffff;
+  white-space:nowrap;
+}
+.d7p-header__badge{
+  display:inline-block;
+  padding:2px 6px;
+  background:var(--color-badge);
+  color:#ffffff;
+  border-radius:3px;
+  font-size:.72em;
+  letter-spacing:.02em;
+}
+.d7p-header__tagline{
+  margin:0;
+  font-size:clamp(.6875rem, 2.4vw, .8125rem);
+  font-weight:500;
+  line-height:1.25;
+  color:rgba(255,255,255,.7);
+  /* максимум 2 строки, дальше — многоточие, вместо кривого overflow:hidden в одну строку */
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.d7p-header.is-scrolled .d7p-header__tagline{ display:none; } /* компактная шапка при скролле */
+
+.d7p-header__actions{
+  display:flex;
+  align-items:center;
+  gap:2px;
+  flex-shrink:0;
+}
+
+/* Навигация и соцсети — есть в разметке, но на мобильном скрыты (уходят в drawer) */
+.d7p-header__nav-menu,
+.d7p-header__social-list{ display:none; }
+
+/* =========================================================
+   ВЫДВИЖНОЙ ПОИСК — слайд-панель под шапкой на всю ширину
+   ========================================================= */
+.d7p-search{
+  max-height:0;
+  overflow:hidden;
+  background:#0d0d0d;
+  border-top:1px solid rgba(255,255,255,.08);
+  transition:max-height .3s ease;
+}
+.d7p-search.is-open{ max-height:88px; }
+.d7p-search__body{ padding:14px 16px; }
+.d7p-search-form{
+  display:flex;
+  align-items:center;
+  background:#ffffff;
+  border-radius:6px;
+  overflow:hidden;
+}
+.d7p-search-form__input{
+  flex:1;
+  min-width:0;
+  padding:12px 14px;
+  border:0;
+  outline:none;
+  font:inherit;
+  font-size:1rem;
+  color:var(--color-dark);
+  background:transparent;
+}
+.d7p-search-form__submit{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  align-self:stretch;
+  width:48px;
+  border:0;
+  background:var(--color-accent);
+  color:#ffffff;
+  cursor:pointer;
+  transition:background .2s ease;
+}
+.d7p-search-form__submit:hover{ background:#e05f00; }
+.d7p-search-form__submit svg{ width:18px; height:18px; }
+
+/* =========================================================
+   ЗАТЕМНЕНИЕ ФОНА (общее для меню и поиска на мобильном)
+   ========================================================= */
+.d7p-header__backdrop{
+  position:fixed;
+  inset:0;
+  z-index:60;
+  background:rgba(0,0,0,.55);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .3s ease, visibility .3s ease;
+}
+.d7p-header__backdrop.is-visible{ opacity:1; visibility:visible; }
+
+/* =========================================================
+   МОБИЛЬНОЕ МЕНЮ — выезжает справа
+   ========================================================= */
+.d7p-menu{
+  position:fixed;
+  top:0; right:0; bottom:0;
+  z-index:70;
+  width:min(320px, 85vw);
+  padding:20px;
+  overflow-y:auto;
+  background:#000000;
+  color:#ffffff;
+  transform:translateX(100%);
+  visibility:hidden;
+  transition:transform .3s ease, visibility .3s ease;
+}
+.d7p-menu.is-open{ transform:translateX(0); visibility:visible; }
+.d7p-menu__head{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:28px;
+}
+.d7p-menu__title{ font-family:var(--d7p-font-heading); font-weight:700; font-size:1.25rem; }
+.d7p-menu__close{
+  width:40px; height:40px; border:1px solid rgba(255,255,255,.25); border-radius:6px;
+  background:transparent; color:#fff; cursor:pointer;
+}
+.d7p-menu__close:hover{ background:rgba(255,255,255,.1); }
+.d7p-menu__list{ list-style:none; margin:0 0 28px; padding:0; display:flex; flex-direction:column; gap:2px; }
+.d7p-menu__link{
+  display:block; padding:12px 2px; font-size:1.125rem; font-weight:500;
+  text-decoration:none; color:#fff; border-bottom:1px solid rgba(255,255,255,.12);
+  transition:color .2s ease;
+}
+.d7p-menu__link:hover, .d7p-menu__link.is-active{ color:var(--color-accent); }
+.d7p-menu__tg{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:11px 20px; border:1px solid var(--color-accent); border-radius:6px;
+  color:var(--color-accent); font-weight:500; text-decoration:none;
+  transition:background .2s ease, color .2s ease;
+}
+.d7p-menu__tg:hover{ background:var(--color-accent); color:#fff; }
+
+/* =========================================================
+   ДЕСКТОП — от 1200px как и было задумано в вашем CSS,
+   но без бургера/дровера: обычная строка навигации + поиск
+   ========================================================= */
+@media (min-width:1200px){
+  .d7p-header__action--menu{ display:none; }
+  .d7p-header__container{ height:var(--header-h-desktop); gap:32px; }
+  .d7p-header.is-scrolled .d7p-header__container{ height:76px; }
+
+  .d7p-header__logo{ flex:0 0 auto; }
+  .d7p-header.is-scrolled .d7p-header__tagline{ display:-webkit-box; } /* на десктопе не прячем */
+
+  .d7p-header__nav-menu{
+    display:flex; align-items:center; gap:28px; flex:1 1 auto;
+  }
+  .d7p-header__nav-menu a{
+    text-decoration:none; color:#fff; font-size:1.0625rem; font-weight:500;
+    transition:color .2s ease;
+  }
+  .d7p-header__nav-menu a:hover,
+  .d7p-header__nav-menu a[aria-current="page"]{ color:var(--color-accent); }
+
+  /* На десктопе поиск не "выпадает", а живёт в строке шапки постоянно */
+  .d7p-header__action--search{ display:none; }
+  .d7p-search{
+    max-height:none; overflow:visible; background:transparent; border-top:0;
+    flex:0 0 260px;
+  }
+  .d7p-search__body{ padding:0; }
+
+  .d7p-header__social-list{
+    display:flex; align-items:center; gap:12px; flex:0 0 auto; list-style:none; margin:0; padding:0;
+  }
+  .d7p-header__social-list a{ display:flex; color:#fff; opacity:.85; transition:opacity .2s ease; }
+  .d7p-header__social-list a:hover{ opacity:1; }
+  .d7p-header__social-list svg{ width:22px; height:22px; }
+}
+
+/* =========================================================
+   Заглушка контента страницы — чтобы видеть sticky-поведение
+   ========================================================= */
+.demo-content{ max-width:900px; margin:0 auto; padding:40px 20px 120px; }
+.demo-content h1{ font-family:var(--d7p-font-heading); font-size:clamp(1.5rem,4vw,2.25rem); }
+.demo-content p{ line-height:1.6; color:#333; }
+.demo-note{
+  margin-top:28px; padding:16px 18px; background:#fff; border-left:3px solid var(--color-accent);
+  border-radius:4px; font-size:.9375rem; line-height:1.55;
+}
+</style>
+</head>
+<body>
+
+<header class="d7p-header" id="header">
+  <div class="d7p-header__container d7p-container">
+
+    <button class="d7p-header__action d7p-header__action--menu"
+            id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
+      <svg class="icon-burger" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+      <span class="d7p-visually-hidden">Меню</span>
+    </button>
+
+    <a href="/" class="d7p-header__logo" aria-label="PERESKAZ TV — на главную">
+      <span class="d7p-header__wordmark">PERESKAZ<span class="d7p-header__badge">TV</span></span>
+      <p class="d7p-header__tagline">Содержание сериалов, фильмов и телешоу</p>
+    </a>
+
+    <nav class="d7p-header__nav-menu" aria-label="Основная навигация">
+      <a href="#" aria-current="page">Сериалы</a>
+      <a href="#">Фильмы</a>
+      <a href="#">Телешоу</a>
+    </nav>
+
+    <div class="d7p-header__actions">
+      <button class="d7p-header__action d7p-header__action--search"
+              id="searchToggle" aria-expanded="false" aria-controls="searchPanel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="d7p-visually-hidden">Поиск</span>
+      </button>
+    </div>
+
+    <!-- десктопная строка поиска (та же панель, просто на десктопе всегда видима через CSS) -->
+    <div class="d7p-search" id="searchPanel">
+      <div class="d7p-search__body">
+        <form class="d7p-search-form" role="search" onsubmit="return false;">
+          <input class="d7p-search-form__input" type="search" placeholder="Что будем искать?" id="searchInput" />
+          <button class="d7p-search-form__submit" type="submit" aria-label="Найти">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <ul class="d7p-header__social-list">
+      <li><a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 3.5 2.7 10.9c-1.2.5-1.2 1.2-.2 1.5l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.8-.4l2.4-2.3 4.9 3.6c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.4-1.8-1.4-1.3Z"/></svg></a></li>
+      <li><a href="#" aria-label="VK"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.2 17.4c-6.5 0-10.2-4.5-10.3-11.9h3.3c.1 5.4 2.5 7.6 4.3 8.1v-8.1h3.1v4.7c1.8-.2 3.6-2.2 4.2-4.7h3.1c-.5 3-2.7 5.1-4.3 5.9 1.6.7 4.1 2.5 5 5.9h-3.4c-.7-2.3-2.5-4.1-5-4.3v4.3h-.4Z"/></svg></a></li>
+    </ul>
+
+  </div>
+</header>
+
+<div class="d7p-header__backdrop" id="backdrop"></div>
+
+<aside class="d7p-menu" id="mobileMenu" aria-hidden="true" aria-label="Мобильное меню">
+  <div class="d7p-menu__head">
+    <span class="d7p-menu__title">Меню</span>
+    <button class="d7p-menu__close" id="menuClose" aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+  </div>
+  <ul class="d7p-menu__list">
+    <li><a class="d7p-menu__link is-active" href="#">Сериалы</a></li>
+    <li><a class="d7p-menu__link" href="#">Фильмы</a></li>
+    <li><a class="d7p-menu__link" href="#">Телешоу</a></li>
+  </ul>
+  <a class="d7p-menu__tg" href="#">Мы в Telegram →</a>
+</aside>
+
+<main class="demo-content">
+  <h1>Пример страницы</h1>
+  <p>Прокрутите вниз — шапка остаётся приклеенной сверху и слегка «сжимается», подпись под логотипом на мобильном при этом скрывается, чтобы не отъедать место.</p>
+  <div class="demo-note">
+    Растяните окно шире 1200px — бургер и выезжающая панель поиска исчезают, вместо них появляется обычное меню и поле поиска в строке шапки. Это тот же HTML, просто другая CSS-раскладка на брейкпоинте.
+  </div>
+  <p style="margin-top:600px">Конец страницы для демонстрации скролла ↑</p>
+</main>
+
+<script>
+(function(){
+  const header      = document.getElementById('header');
+  const menuToggle  = document.getElementById('menuToggle');
+  const menu        = document.getElementById('mobileMenu');
+  const menuClose   = document.getElementById('menuClose');
+  const searchToggle= document.getElementById('searchToggle');
+  const searchPanel = document.getElementById('searchPanel');
+  const searchInput = document.getElementById('searchInput');
+  const backdrop    = document.getElementById('backdrop');
+
+  function isDesktop(){ return window.matchMedia('(min-width:1200px)').matches; }
+
+  function closeAll(){
+    menuToggle.setAttribute('aria-expanded','false');
+    menu.classList.remove('is-open');
+    menu.setAttribute('aria-hidden','true');
+    searchToggle.setAttribute('aria-expanded','false');
+    searchPanel.classList.remove('is-open');
+    backdrop.classList.remove('is-visible');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu(){
+    closeAll();
+    menuToggle.setAttribute('aria-expanded','true');
+    menu.classList.add('is-open');
+    menu.setAttribute('aria-hidden','false');
+    backdrop.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function openSearch(){
+    closeAll();
+    searchToggle.setAttribute('aria-expanded','true');
+    searchPanel.classList.add('is-open');
+    backdrop.classList.add('is-visible');
+    document.body.style.overflow = 'hidden';
+    setTimeout(()=>searchInput.focus(), 150);
+  }
+
+  menuToggle.addEventListener('click', ()=>{
+    menu.classList.contains('is-open') ? closeAll() : openMenu();
+  });
+  menuClose.addEventListener('click', closeAll);
+
+  searchToggle.addEventListener('click', ()=>{
+    if(isDesktop()) return; // на десктопе поле уже видимо
+    searchPanel.classList.contains('is-open') ? closeAll() : openSearch();
+  });
+
+  backdrop.addEventListener('click', closeAll);
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeAll(); });
+
+  window.addEventListener('resize', ()=>{ if(isDesktop()) closeAll(); });
+
+  window.addEventListener('scroll', ()=>{
+    header.classList.toggle('is-scrolled', window.scrollY > 12);
+  });
+})();
+</script>
+
+</body>
+</html>
