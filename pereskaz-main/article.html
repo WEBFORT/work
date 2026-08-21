@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ТЕСТ — содержание серий, чем закончился сериал</title>
+		<meta
+			name="description"
+			content="Описание всех серий сериала «ТЕСТ» — подробный пересказ сюжета по сериям, чем закончился сериал."
+		/>
+		<link rel="icon" href="assets/img/favicon-32x32.png" sizes="32x32" />
+		<link rel="stylesheet" href="assets/css/app.css" />
+	</head>
+	<body class="d7p-page d7p-page--article">
+		<!-- <a class="d7p-skip-link" href="#main">Перейти к содержимому</a> -->
+
+		<header id="page-top" class="d7p-header">
+			<div class="d7p-header__container d7p-container">
+				<a href="index.html" class="d7p-header__logo">
+					<img
+						src="assets/img/logo.svg"
+						width="290"
+						height="80"
+						alt="Логотип сайта"
+						loading="lazy"
+					/>
+					<span class="d7p-header__tagline"
+						>Содержание сериалов, фильмов и телешоу</span
+					>
+				</a>
+
+				<!-- Меню (десктоп): inline в шапке. На мобильных скрыто, открывается из «гамбургера» -->
+				<nav class="d7p-header__nav-menu" aria-label="Основная навигация">
+					<a href="index.html">Главная</a>
+					<a href="#podborki">Подборки</a>
+					<a href="#about">О нас</a>
+				</nav>
+
+				<div class="d7p-header__social-list">
+					<a href="https://t.me/kratserial" target="_blank" rel="noopener">
+						<img
+							src="assets/img/telegram.png"
+							width="34"
+							height="34"
+							alt="Телеграм-канал KRATSERIAL"
+							loading="lazy"
+						/>
+					</a>
+				</div>
+
+				<!-- Поиск (десктоп): обычное окно. На мобильных скрыто, открывается по значку-лупе -->
+				<div class="d7p-header__search">
+					<form class="d7p-search-form" role="search" action="#" method="get">
+						<label class="d7p-visually-hidden" for="desktop-search"
+							>Поиск по сайту</label
+						>
+						<input
+							class="d7p-search-form__input"
+							id="desktop-search"
+							type="search"
+							name="s"
+							placeholder="Найти сериал"
+							autocomplete="off"
+						/>
+						<button
+							class="d7p-search-form__submit"
+							type="submit"
+							aria-label="Найти"
+						>
+							<svg
+								width="18"
+								height="18"
+								viewBox="0 0 24 24"
+								fill="none"
+								aria-hidden="true"
+								focusable="false"
+							>
+								<circle
+									cx="11"
+									cy="11"
+									r="7"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M16.5 16.5L21 21"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+							</svg>
+						</button>
+					</form>
+				</div>
+
+				<!-- Мобильные кнопки: «гамбургер» + лупа -->
+				<div class="d7p-header__actions">
+					<button
+						class="d7p-header__action d7p-header__action--search"
+						type="button"
+						data-search-toggle
+						aria-expanded="false"
+						aria-controls="mobile-search"
+					>
+						<svg
+							class="d7p-header__search-icon"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+							focusable="false"
+						>
+							<circle
+								cx="11"
+								cy="11"
+								r="7"
+								stroke="currentColor"
+								stroke-width="2"
+							/>
+							<path
+								d="M16.5 16.5L21 21"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+						</svg>
+						<svg
+							class="d7p-header__search-close-icon"
+							width="22"
+							height="22"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+							focusable="false"
+						>
+							<path
+								d="M6 6l12 12M18 6L6 18"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+						</svg>
+						<span class="d7p-visually-hidden">Открыть поиск</span>
+					</button>
+					
+					<button
+						class="d7p-header__action d7p-header__action--menu"
+						type="button"
+						data-menu-toggle
+						aria-expanded="false"
+						aria-controls="primary-nav"
+					>
+						<svg
+							class="d7p-header__burger-icon"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+							focusable="false"
+						>
+							<path
+								d="M4 7h16M4 12h16M4 17h16"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+						</svg>
+						<svg
+							class="d7p-header__close-icon"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+							focusable="false"
+						>
+							<path
+								d="M6 6l12 12M18 6L6 18"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+						</svg>
+						<span class="d7p-visually-hidden">Открыть меню</span>
+					</button>
+					
+				</div>
+			</div>
+
+			<div class="d7p-header__backdrop" data-menu-backdrop></div>
+
+			<!-- Мобильное меню (выдвижная панель) -->
+			<nav
+				class="d7p-menu"
+				id="primary-nav"
+				aria-label="Мобильная навигация"
+				inert
+			>
+				<div class="d7p-menu__head">
+					<span class="d7p-menu__title"></span>
+					<button class="d7p-menu__close" type="button" data-close-nav>
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							aria-hidden="true"
+							focusable="false"
+						>
+							<path
+								d="M6 6l12 12M18 6L6 18"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+							/>
+						</svg>
+						<span class="d7p-visually-hidden">Закрыть меню</span>
+					</button>
+				</div>
+				<ul class="d7p-menu__list">
+					<li><a class="d7p-menu__link" href="index.html">Главная</a></li>
+					<li><a class="d7p-menu__link" href="#podborki">Подборки</a></li>
+					<li><a class="d7p-menu__link" href="#about">О нас</a></li>
+				</ul>
+				<a
+					class="d7p-menu__tg"
+					href="https://t.me/kratserial"
+					target="_blank"
+					rel="noopener"
+					>Telegram-канал</a
+				>
+			</nav>
+
+			<!-- Мобильный поиск (выпадает под шапкой по нажатию лупы) -->
+			<div
+				class="d7p-search"
+				id="mobile-search"
+				role="search"
+				aria-hidden="true"
+				inert
+			>
+				<div class="d7p-search__body d7p-container">
+					<form class="d7p-search-form" action="#" method="get">
+						<label class="d7p-visually-hidden" for="mobile-search-input"
+							>Поиск по сайту</label
+						>
+						<input
+							class="d7p-search-form__input"
+							id="mobile-search-input"
+							type="search"
+							name="s"
+							placeholder="Найти сериал"
+							autocomplete="off"
+						/>
+						<button
+							class="d7p-search-form__submit"
+							type="submit"
+							aria-label="Найти"
+						>
+							<svg
+								width="22"
+								height="22"
+								viewBox="0 0 24 24"
+								fill="none"
+								aria-hidden="true"
+								focusable="false"
+							>
+								<circle
+									cx="11"
+									cy="11"
+									r="7"
+									stroke="currentColor"
+									stroke-width="2"
+								/>
+								<path
+									d="M16.5 16.5L21 21"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+								/>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</header>
+
+		<main class="d7p-main">
+			<div class="d7p-main__container d7p-container d7p-container--narrow">
+				<div class="text_renew d7p-text-renew">
+					<div class="d7p-article-breadcrumbs">
+						<a href="index.html">Главная</a> /
+						<a href="index.html">Сериалы</a> /
+
+						<span>ТЕСТ</span>
+					</div>
+					<h1 class="intro_title_renew">
+						Содержание серий сериала «ТЕСТ», чем закончился сериал
+					</h1>
+
+					<div class="picture">
+						<picture>
+							<source
+								media="(min-width: 480px)"
+								srcset="assets/img/voshebniuchastok1.jpg"
+							/>
+							<img
+								src="assets/img/voshebniuchastok1.jpg"
+								width="610"
+								height="350"
+								loading="lazy"
+								alt="ТЕСТ описание серий, чем закончился сериал"
+								class="mobile_logo"
+							/>
+						</picture>
+					</div>
+
+					<p class="date">дата публикации: 14 мая 2026</p>
+					<p class="reading">время на прочтение: 3 мин.</p>
+					<p class="date">статью подготовил(а): Снежана Кириллова</p>
+
+					<ul class="make_choice">
+						<div>Оглавление:</div>
+						<li class="oglavlenie">
+							<a href="#description">Описание сериала «ТЕСТ»</a>
+						</li>
+
+						<li class="oglavlenie">
+							<a href="#detailed"> Подробный пересказ сюжета по сериям </a>
+						</li>
+
+						<li class="oglavlenie_seria">
+							<a href="#0"> 1 серия – Lorem ipsum </a>
+						</li>
+						<li class="oglavlenie_seria">
+							<a href="#1"> 2 серия – dolor sit amet </a>
+						</li>
+						<li class="oglavlenie_seria">
+							<a href="#2"> 3 серия – onsectetur adipiscing elit </a>
+						</li>
+						<li class="oglavlenie_seria">
+							<a href="#3"> 4 серия – sed do eiusmod tempor </a>
+						</li>
+
+						<li class="oglavlenie">
+							<a href="#end"
+								>Чем закончится сериал «ТЕСТ». Подробное описание финала</a
+							>
+						</li>
+					</ul>
+
+					<div class="d7p-custom-code-wrapper"></div>
+
+					<p>&nbsp;</p>
+
+					<h2 class="intro_title_kratko_renew">
+						Краткое содержание всех серий сериала «ТЕСТ»
+					</h2>
+
+					<div id="description" class="textcols_renew">
+						<p class="full_description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+
+						<h4 id="detailed" class="d7p-kadri__title intro_title_kratko_renew">
+							Подробный пересказ сюжета сериала «ТЕСТ» по сериям
+						</h4>
+
+						<p id="0" class="series_number">1 серия – Lorem ipsum</p>
+
+						<p class="full_description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<p id="1" class="series_number">2 серия – dolor sit amet</p>
+
+						<p class="full_description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<p id="2" class="series_number">
+							3 серия – onsectetur adipiscing elit
+						</p>
+
+						<p class="full_description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+						<p id="3" class="series_number">4 серия – sed do eiusmod tempor</p>
+
+						<p class="full_description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+
+						<h4 id="end" class="final">Чем закончился сериал «ТЕСТ»</h4>
+						<p class="full_description">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat
+							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+							sunt in culpa qui officia deserunt mollit anim id est laborum.
+						</p>
+
+						<div class="d7p-tg-invite">
+							<p>
+								Вступайте в наши группы в социальных сетях, читайте новые статьи
+								первыми!
+							</p>
+
+							<div class="d7p-tg-invite__links">
+								<a
+									href="https://vk.com/kratserial"
+									class="d7p-tg-invite__link d7p-tg-invite__link--vk"
+									aria-label="Ссылка на группу Вконтакте"
+									target="_blank"
+									rel="noopener"
+								>
+									<img
+										src="assets/img/vk-btn.png"
+										width="521"
+										height="188"
+										loading="lazy"
+										alt="Вступайте в группу Вконтакте"
+									/>
+								</a>
+
+								<a
+									href="https://t.me/kratserial"
+									class="d7p-tg-invite__link d7p-tg-invite__link--tg"
+									aria-label="Ссылка на Телеграм-канал"
+									target="_blank"
+									rel="noopener"
+								>
+									<img
+										src="assets/img/tg-channel-btn.png"
+										width="640"
+										height="188"
+										loading="lazy"
+										alt="Подписывайтесь на Телеграм-канал"
+									/>
+								</a>
+							</div>
+						</div>
+
+						<div class="d7p-custom-code-wrapper"></div>
+					</div>
+				</div>
+
+				<aside class="d7p-sidebar" id="podborki">
+					<section class="d7p-sidebar__section d7p-sidebar__section--cats">
+						<div class="d7p-sidebar__cats">
+							<h2 class="d7p-sidebar__title">Подборки</h2>
+							<div class="d7p-sidebar__cat-list">
+								<a href="#podborki">Апокалипсис</a>
+								<a href="#podborki">Биографические</a>
+								<a href="#podborki">Военные</a>
+								<a href="#podborki">Детективы</a>
+								<a href="#podborki">Детективы на ТВЦ</a>
+								<a href="#podborki">Драмы</a>
+								<a href="#podborki">Комедии</a>
+								<a href="#podborki">Мелодрамы</a>
+								<a href="#podborki">Мелодрамы на Домашнем</a>
+								<a href="#podborki">Мистика и ужасы</a>
+								<a href="#podborki">Триллеры и боевики</a>
+								<a href="#podborki">Турецкие сериалы</a>
+								<a href="#podborki">Фантастика</a>
+								<a href="#podborki">Фэнтази</a>
+							</div>
+						</div>
+					</section>
+
+					<div class="d7p-custom-code-wrapper"></div>
+
+					<section class="d7p-sidebar__section d7p-sidebar__section--pop">
+						<h2 class="d7p-sidebar__title">Популярное</h2>
+						<div class="d7p-sidebar__pop-list"></div>
+					</section>
+				</aside>
+			</div>
+		</main>
+
+		<footer class="d7p-footer">
+			<div class="d7p-footer__container d7p-container">
+				<div class="d7p-footer__content" id="about">
+					<p>PereskazTV — подробное содержание сериалов, фильмов и телешоу.</p>
+					<p>Пересказы публикуются в информационных целях.</p>
+				</div>
+			</div>
+		</footer>
+
+		<div class="d7p-to-top-btn-wrapper">
+			<button
+				class="d7p-to-top-btn"
+				type="button"
+				data-to-top
+				hidden
+				aria-label="Вернуться к началу страницы"
+			></button>
+		</div>
+
+		<script src="js/main.js" defer></script>
+	</body>
+</html>
