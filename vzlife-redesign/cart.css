@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Стили страницы корзины (cart.html)
+   Требует подключённого styles.css
+   ========================================================================== */
+
+.cart-layout{ display:flex; gap:32px; align-items:flex-start; }
+.cart-items{ flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:14px; }
+.cart-summary-col{ flex:0 0 340px; position:sticky; top:112px; }
+
+.cart-row{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-md); padding:18px; display:flex; gap:18px; align-items:center; }
+.cart-row .thumb{ flex:0 0 84px; height:84px; border-radius:14px; display:flex; align-items:center; justify-content:center; }
+.cart-row .thumb .icn{ width:36px; height:36px; }
+.cart-row .info{ flex:1 1 0; min-width:0; }
+.cart-row .info h4{ font-size:15px; font-weight:700; margin:0 0 6px; color:var(--ink); line-height:1.35; }
+.cart-row .info .meta{ font-size:12.5px; color:var(--ink-faint); }
+.cart-row .qty{ display:flex; align-items:center; border:1.5px solid var(--line); border-radius:11px; overflow:hidden; flex-shrink:0; }
+.cart-row .qty button{ width:34px; height:34px; background:var(--bg); border:none; color:var(--brand-dark); font-size:16px; font-weight:700; }
+.cart-row .qty button:hover{ background:var(--brand-tint); }
+.cart-row .qty input{ width:40px; height:34px; border:none; text-align:center; font-family:'PT Mono'; font-size:14px; font-weight:700; color:var(--ink); }
+.cart-row .price-col{ flex:0 0 100px; text-align:right; font-family:'PT Mono'; font-weight:700; color:var(--brand-dark); font-size:16px; }
+.cart-row .remove{ flex-shrink:0; width:34px; height:34px; border-radius:50%; border:none; background:transparent; color:var(--ink-faint); display:flex; align-items:center; justify-content:center; }
+.cart-row .remove:hover{ background:var(--danger-tint); color:var(--danger); }
+
+.cart-empty-note{ display:flex; align-items:center; gap:10px; font-size:13px; color:var(--ink-faint); padding:4px 4px 0; }
+.cart-empty-note svg{ flex-shrink:0; color:var(--brand); }
+
+.saved-later{ margin-top:8px; }
+.saved-later summary{ cursor:pointer; font-weight:700; font-size:13.8px; color:var(--brand); padding:10px 4px; }
+
+.summary-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg); padding:24px; }
+.summary-card h3{ font-size:17px; margin-bottom:18px; }
+.summary-line{ display:flex; justify-content:space-between; font-size:14.5px; color:var(--ink-soft); padding:9px 0; }
+.summary-line.total{ border-top:1px solid var(--line); margin-top:8px; padding-top:16px; font-weight:700; color:var(--ink); font-size:17px; }
+.summary-line.total .val{ font-family:'PT Mono'; color:var(--brand-dark); }
+.promo-row{ display:flex; gap:8px; margin:16px 0; }
+.promo-row input{ flex:1; border:1.5px solid var(--line); border-radius:11px; padding:11px 13px; font-size:13.5px; outline:none; }
+.promo-row input:focus{ border-color:var(--brand); }
+.promo-row button{ flex-shrink:0; }
+.summary-note{ display:flex; gap:9px; font-size:12.5px; color:var(--ink-faint); background:var(--brand-tint); padding:12px 14px; border-radius:12px; margin-top:14px; line-height:1.5; }
+.summary-note svg{ flex-shrink:0; color:var(--brand); margin-top:1px; }
+
+.trust-mini{ display:flex; flex-direction:column; gap:12px; margin-top:20px; padding-top:20px; border-top:1px solid var(--line); }
+.trust-mini .ti{ display:flex; align-items:center; gap:10px; font-size:12.8px; color:var(--ink-soft); }
+.trust-mini .ti svg{ color:var(--brand); flex-shrink:0; }
+
+/* ---------- Empty cart state ---------- */
+.cart-empty{ text-align:center; padding:70px 20px; }
+.cart-empty .ic{ width:74px; height:74px; border-radius:50%; background:var(--brand-tint); color:var(--brand); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; }
+.cart-empty h2{ font-size:22px; margin-bottom:10px; }
+.cart-empty p{ color:var(--ink-soft); margin:0 0 24px; }
+
+@media (max-width:960px){
+  .cart-layout{ flex-direction:column; }
+  .cart-summary-col{ position:static; width:100%; flex-basis:auto; }
+  .cart-row{ flex-wrap:wrap; }
+  .cart-row .price-col{ order:5; flex:1 1 auto; text-align:left; }
+}
